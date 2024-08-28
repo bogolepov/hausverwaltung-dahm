@@ -1,0 +1,56 @@
+---
+// import "@styles/font.css"
+// import "@styles/init.css"
+import "@styles/dahm.css"
+
+import Header from "@components/header.astro";
+// import Footer from "@components/footer.astro";
+import Head from "@components/head.astro";
+
+import DahmBulding from "@assets/building_dahm2.jpg"
+const { title, description, robots = "index, follow" } = Astro.props;
+
+import { Picture } from 'astro:assets'
+
+---
+
+<style>
+	/* body {
+		margin: 0;
+	} */
+</style>
+
+<html lang='de'>
+	<Head title={title} description={description} robots={robots} />
+
+	<body>
+
+		<script>
+		// import { initPage } from "@scripts/antrepriza.js"
+			document.addEventListener('DOMContentLoaded', () => {
+				// initPage();
+			});
+		</script>
+
+		<Header/>
+		<main>
+			<div class="dahm-building">
+				<Picture 
+				  class:list={'image-wrapper-landscape float'} 
+					src={DahmBulding} 
+					formats={['webp']} 
+					fallbackFormat='jpg'
+					loading="eager"
+					widths={[360, 480, 600, 760, 960, 1200, 1600]}
+					sizes={'(max-width: 360px) 360px, (max-width: 480px) 480px, (max-width: 600px) 600px, (max-width: 760px) 760px, (max-width: 960px) 960px, (max-width: 1200px) 1200px, 1600px'}
+					quality="100"
+					alt='' />
+			</div>
+			<slot/>
+		</main>
+		<!-- <Footer/> -->
+
+		<input type="checkbox" id="theme-switcher" tabindex="-1" aria-label='Themaänderung: dunkel oder hell' checked/>
+	</body>
+	
+</html>

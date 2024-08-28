@@ -1,0 +1,37 @@
+---
+
+const { lang } = Astro.props;
+
+import dictionary from '@data/dictionary.json'
+import theater from '@data/theater.json'
+
+import "../styles/impressum.css"
+
+const director = theater.people.find(person => person.id === theater.director);
+
+---
+
+<section class="impressum">
+  <h1 class="section-title">{dictionary.impressum[lang]}</h1>
+  <div class="impressum-block">
+    <h3 class="h3-title theater">{theater.longTheaterName[lang]}</h3>
+    <div class="address">
+      <address class="info-text font-opacity1">{dictionary.address[lang]}:</address>
+      <address class="info-text">RUSFILM GbR c/o Theater Antrepriza</address>
+      <address class="info-text">Budapester Str. 7-9</address>
+      <address class="info-text">10787 Berlin</address>
+    </div>
+    <div class="contact">
+      <div class="info-text">
+        <a href={"tel:"+theater.phone}><span class="font-opacity1">{dictionary.telephone[lang]}:</span> {theater.phone}</a>
+      </div>
+      <div class="info-text">
+        <a href={"mailto:"+theater.email}><span class="font-opacity1">{dictionary.email[lang]}:</span> {theater.email}</a>
+      </div>
+    </div>
+    <h3 class="h3-title person">{dictionary.responsible[lang]}</h3>
+    <div class="person-name">{director.name[lang]} {director.surname[lang]} <span class="font-opacity1">({dictionary.director[lang]})</span></div>
+
+  </div>
+  <div class="page-end"></div>
+</section>

@@ -1,5 +1,5 @@
 ---
-const { lang, title, description, og_title } = Astro.props;
+const { description, og_title } = Astro.props;
 const pathname: string = new URL(Astro.request.url).pathname;
 
 let ogDescription = description;

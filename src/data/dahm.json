@@ -1,4 +1,64 @@
 {
 	"telephone": "+49 2331 924936",
-	"email": "info@hv-dahm.de"
+	"email": "info@hv-dahm.de",
+	"personal": [
+		{
+			"sid": "mid",
+			"vorname": "Michael",
+			"nachname": "Dahm",
+			"email": "dahm@hv-dahm.de",
+			"burozeit": "Täglich von 9 Uhr - 13 Uhr",
+			"stelle": "Inhaber"
+		},
+		{
+			"sid": "kah",
+			"vorname": "Karin",
+			"nachname": "Hoffmann",
+			"email": "hoffmann@hv-dahm.de ",
+			"burozeit": "Täglich, 9 Uhr - 13 Uhr"
+		},
+		{
+			"sid": "sib",
+			"vorname": "Silke",
+			"nachname": "Band",
+			"email": "band@hv-dahm.de",
+			"burozeit": "Täglich, 9 Uhr - 13 Uhr"
+		},
+		{
+			"sid": "sas",
+			"vorname": "Sandra",
+			"nachname": "Saes",
+			"email": "saes@hv-dahm.de",
+			"burozeit": "Montags bis Mittwochs, 9 Uhr - 12 Uhr"
+		},
+		{
+			"sid": "sis",
+			"vorname": "Silvia",
+			"nachname": "Sommer",
+			"email": "sommer@hv-dahm.de ",
+			"burozeit": "Mittwochs bis Freitags, 9 Uhr - 12 Uhr"
+		}
+	],
+	"objekte": [
+		{ "address": "Alemannenweg 9", "person": ["kah"] },
+		{ "address": "Frankfurter Str. 71/73, Breckerfeld", "person": ["kah"] },
+		{ "address": "Grünrockstr. 17", "person": ["kah"] },
+		{ "address": "Im Lindenthal 48", "person": ["kah"] },
+		{ "address": "Hospitalstr. 9", "person": ["kah"] },
+		{ "address": "Schwerte Str. 158", "person": ["kah"] },
+		{ "address": "Ruhreckstr. 35", "person": ["kah"] },
+		{ "address": "Beethovenstr. 62", "person": ["sib"] },
+		{ "address": "Emster Str. 86 ", "person": ["sib"] },
+		{ "address": "Kockenhof 18", "person": ["sib"] },
+		{ "address": "Milly-Steger-Str. 12", "person": ["sib"] },
+		{ "address": "Sedanstr. 41", "person": ["sib, sis"] },
+		{ "address": "Overbeckstr. 1, Dortmund", "person": ["sib"] },
+		{ "address": "Neumarktst. 12", "person": ["sas"] },
+		{ "address": "Grimmestr. 13/13a", "person": ["sas"] },
+		{ "address": "Grimmestr. 15", "person": ["sas"] },
+		{ "address": "Grünstr. 123, Schwerte", "person": ["sas"] },
+		{ "address": "Oststr. 16", "person": ["sas"] },
+		{ "address": "Emster Str. 17", "person": ["sis"] },
+		{ "address": "Prentzelstr. 10", "person": ["sis"] }
+	]
 }

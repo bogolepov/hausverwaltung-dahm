@@ -22,7 +22,8 @@ html {
 }
 
 :root {
-	--color-dahm-bordo: #691d27;
+	/* --color-dahm-bordo: #691d27; */
+	--color-dahm-bordo: #802932;
 	--color-dahm-grey: #9f9e9e;
 	--color-marker: rgb(205, 158, 74);
 	--color-marker: var(--color-dahm-bordo);
@@ -152,7 +153,8 @@ textarea {
 }
 /* End extract */
 h1 {
-	font-size: calc(var(--font-size) * 2.25);
+	font-size: calc(var(--font-size) * 2);
+	margin-top: 0;
 }
 h2 {
 	font-size: calc(var(--font-size) * 1.85);
@@ -184,6 +186,9 @@ ul {
 	padding: 0;
 	margin: 0;
 	list-style: none;
+}
+section {
+	width: 100%;
 }
 
 .dahm-building {

@@ -1,0 +1,78 @@
+---
+import Logo from '@assets/logo.svg?url'
+import MichaelDahm from "@assets/MichaelDahm.jpg"
+
+import Dahm from "@data/dahm.json"
+
+import { Picture } from 'astro:assets'
+
+const pictureTextInhaber: string = 'Michael DAHM, Inhaber';
+
+---
+<style>
+  p.description {
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+  p.info {
+    font-weight: 540;
+  }
+  .dahm-inhaber {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+  }
+  .dahm-inhaber .image-wrapper-landscape {
+    padding-top: 0.6em;
+    padding-bottom: 0.4em;
+  }
+  .under-text {
+    font-size: 0.9em;
+    font-weight: 300;
+  }
+  /* li {
+    margin: 0.5em 0;
+    padding: 0.1em 0 0.5em 3em;
+    background-image: url('/assets/logo.svg');
+    background-position: 0 0;
+    background-size: 1.7em 1.5em;
+    background-repeat: no-repeat;
+  } */
+  hr {
+    border-color: var(--color-dahm-grey);
+  }
+</style>
+
+<section class="service">
+  <h1>Team</h1>
+  <h3>Unsere Verwaltung</h3>
+  <p class="description">Hausverwaltung Dahm aus Hagen verwaltet seit über 25 Jahren verlässlich Immobilien. Wir arbeiten stets seriös, zuverlässig und professionell.</p>
+  <div class="dahm-inhaber">
+    <Picture 
+      class:list={'image-wrapper-landscape'} 
+      src={MichaelDahm} 
+      formats={['webp']} 
+      fallbackFormat='jpg'
+      loading="eager"
+      widths={[360, 480, 600, 760, 840]}
+      sizes={'(max-width: 360px) 360px, (max-width: 480px) 480px, (max-width: 600px) 600px, (max-width: 760px) 760px, 840px'}
+      quality="100"
+      alt={pictureTextInhaber} />
+    <div class="under-text">{pictureTextInhaber}</div>
+  </div>
+  <hr>
+  <h3>Unsere Ansprechpartner</h3>
+  <p class="description">Um Ihnen die Suche nach dem richtigen Ansprechpartner etwas zu erleichtern, haben wir für Sie hier unsere Aufgabenbereiche zusammengefasst.</p>
+  <p class="info">Sie erreichen uns unter der Telefonnummer : <a href={"tel: " + Dahm.telephone}>{Dahm.telephone}</a></p>
+  <ul>
+    {
+      Dahm.personal.map(person => {
+        return (
+          <li>{person.vorname} {person.nachname}</li>
+        );
+      })
+    }
+  </ul>
+</section>

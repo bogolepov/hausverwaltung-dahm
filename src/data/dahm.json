@@ -40,25 +40,70 @@
 		}
 	],
 	"objekte": [
-		{ "address": "Alemannenweg 9", "person": ["kah"] },
-		{ "address": "Frankfurter Str. 71/73, Breckerfeld", "person": ["kah"] },
-		{ "address": "Grünrockstr. 17", "person": ["kah"] },
-		{ "address": "Im Lindenthal 48", "person": ["kah"] },
-		{ "address": "Hospitalstr. 9", "person": ["kah"] },
-		{ "address": "Schwerte Str. 158", "person": ["kah"] },
-		{ "address": "Ruhreckstr. 35", "person": ["kah"] },
-		{ "address": "Beethovenstr. 62", "person": ["sib"] },
-		{ "address": "Emster Str. 86 ", "person": ["sib"] },
-		{ "address": "Kockenhof 18", "person": ["sib"] },
-		{ "address": "Milly-Steger-Str. 12", "person": ["sib"] },
-		{ "address": "Sedanstr. 41", "person": ["sib, sis"] },
-		{ "address": "Overbeckstr. 1, Dortmund", "person": ["sib"] },
-		{ "address": "Neumarktst. 12", "person": ["sas"] },
-		{ "address": "Grimmestr. 13/13a", "person": ["sas"] },
-		{ "address": "Grimmestr. 15", "person": ["sas"] },
-		{ "address": "Grünstr. 123, Schwerte", "person": ["sas"] },
-		{ "address": "Oststr. 16", "person": ["sas"] },
-		{ "address": "Emster Str. 17", "person": ["sis"] },
-		{ "address": "Prentzelstr. 10", "person": ["sis"] }
+		{
+			"address": { "str": "Alemannenweg", "number": "9", "plz": "58119", "city": "Hagen", "distr": "Hohenlimburg" },
+			"person": ["kah"],
+			"photo": ["Alemannenweg.jpg"]
+		},
+		{ "address": { "str": "Frankfurter Str.", "number": "71/73", "plz": "58339", "city": "Breckerfeld" }, "person": ["kah"] },
+		{ "address": { "str": "Grünrockstr.", "number": "17", "plz": "58119", "city": "Hagen", "distr": "Hohenlimburg" }, "person": ["kah"] },
+		{
+			"address": { "str": "Im Lindental", "number": "48", "plz": "58135", "city": "Hagen", "distr": "Haspe" },
+			"person": ["kah"],
+			"photo": ["Lindental.jpg"]
+		},
+		{ "address": { "str": "Hospitalstr.", "number": "9", "plz": "58099", "city": "Hagen", "distr": "Bölerheide" }, "person": ["kah"] },
+		{ "address": { "str": "Schwerte Str.", "number": "158", "plz": "58099", "city": "Hagen", "distr": "Bölerheide" }, "person": ["kah"] },
+		{ "address": { "str": "Ruhreckstr.", "number": "35", "plz": "58099", "city": "Hagen", "distr": "Bölerheide" }, "person": ["kah"] },
+		{
+			"address": { "str": "Beethovenstr.", "number": "62", "plz": "58097", "city": "Hagen", "distr": "Klosterviertel" },
+			"person": ["sib"],
+			"photo": ["Beethovenstr.jpg"]
+		},
+		{ "address": { "str": "Emster Str.", "number": "86", "plz": "58093", "city": "Hagen", "distr": "Emst" }, "person": ["sib"] },
+		{
+			"address": { "str": "Kockenhof", "number": "18", "plz": "58093", "city": "Hagen", "distr": "Berchum" },
+			"person": ["sib"],
+			"photo": ["Kockenhof.jpg"]
+		},
+		{
+			"address": { "str": "Milly-Steger-Str.", "number": "12", "plz": "58093", "city": "Hagen", "distr": "Emst" },
+			"person": ["sib"],
+			"photo": ["Milly-Steger-Str.jpg"]
+		},
+		{
+			"address": { "str": "Sedanstr.", "number": "41", "plz": "58089", "city": "Hagen", "distr": "Altenhagen" },
+			"person": ["sib, sis"],
+			"photo": ["Sedanstr.jpg"]
+		},
+		{ "address": { "str": "Overbeckstr.", "number": "1", "plz": "44141", "city": "Dortmund", "distr": "Innenstadt" }, "person": ["sib"] },
+		{
+			"address": { "str": "Neumarktstr.", "number": "12", "plz": "58095", "city": "Hagen", "distr": "Zentrum" },
+			"person": ["sas"],
+			"photo": ["Neumarktstr.jpg"]
+		},
+		{ "address": { "str": "Grimmestr.", "number": "13/13a", "plz": "58099", "city": "Hagen", "distr": "Bölerheide" }, "person": ["sas"] },
+		{ "address": { "str": "Grimmestr.", "number": "15", "plz": "58099", "city": "Hagen", "distr": "Bölerheide" }, "person": ["sas"] },
+		{ "address": { "str": "Grünstr.", "number": "123", "plz": "58239", "city": "Schwerte" }, "person": ["sas"] },
+		{ "address": { "str": "Oststr.", "number": "16", "plz": "58119", "city": "Hagen", "distr": "Hohenlimburg" }, "person": ["sas"] },
+		{
+			"address": { "str": "Emster Str.", "number": "17", "plz": "58093", "city": "Hagen", "distr": "Emst" },
+			"person": ["sis"],
+			"photo": ["Emsterstr.jpg"]
+		},
+		{
+			"address": { "str": "Prentzelstr.", "number": "10", "plz": "58095", "city": "Hagen", "distr": "Zentrum" },
+			"person": ["sis"],
+			"photo": ["Prentzelstr.jpg"]
+		},
+		{
+			"address": { "str": "Elberfelder Str.", "number": "45", "plz": "58095", "city": "Hagen", "distr": "Zentrum" },
+			"photo": ["Elberfelder.jpg"]
+		},
+		{
+			"address": { "str": "Dödterstr.", "number": "10", "plz": "58095", "city": "Hagen", "distr": "Elbershallen" },
+			"photo": ["Elbershallen.jpg"],
+			"url": "http://www.elbershallen.de/"
+		}
 	]
 }

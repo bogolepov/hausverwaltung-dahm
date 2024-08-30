@@ -154,6 +154,7 @@ textarea {
 /* End extract */
 h1 {
 	font-size: calc(var(--font-size) * 2);
+	line-height: 1.2;
 	margin-top: 0;
 }
 h2 {
@@ -189,6 +190,10 @@ ul {
 }
 section {
 	width: 100%;
+}
+use {
+	width: 100%;
+	height: 100%;
 }
 
 .dahm-building {

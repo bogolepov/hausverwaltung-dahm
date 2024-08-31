@@ -86,7 +86,7 @@ import { Icon } from 'astro-icon/components'
     padding: 0.2em 0.5em;
     display: none;
   }
-  @media screen and (min-width: 630px) {
+  @media screen and (min-width: 650px) {
     .phone-icon {
       display: none;
     }
@@ -130,7 +130,7 @@ import { Icon } from 'astro-icon/components'
     /* text-align: right; */
     align-items: start;
     padding: calc(var(--header-height) + 1em ) 0.65em 0.8em 0.7em;
-    font-size: calc(var(--font-size) * 1.5);
+    font-size: calc(var(--font-size) * 1.3);
   }
   .global-menu a {
     padding-left: calc(0.6em + 3px);
@@ -139,12 +139,12 @@ import { Icon } from 'astro-icon/components'
     padding-left: 0.6em;
     border-left: 3px solid var(--color-marker);
   }
-  @media screen and (max-width: 535px) {
+  @media screen and (max-width: 555px) {
     body:has(#burger-button:checked) .global-menu-layer {
       display: block;
     }
   }
-  @media screen and (min-width: 535px) {
+  @media screen and (min-width: 555px) {
     .menu-item-desktop {
       display: block;
     }
@@ -201,7 +201,7 @@ import { Icon } from 'astro-icon/components'
     <ul class="nav-list">
       <li class="logo">
         <a href={"/"} aria-label={Dahm.company_name}>
-          <Icon name="logo-text" class="nav-logo-text fv" />
+          <Icon name="logo-text" class="nav-logo-text fv" size="1rem" />
         </a>
       </li>
       {
@@ -235,7 +235,7 @@ import { Icon } from 'astro-icon/components'
     {
       Menu.map(menuItem => {
         return(
-          <li class="menu-item-mobile fv"><a href={"/" + menuItem.url} class:list={[{active_link: (currentPath.length === 0 && menuItem.url === '') || (currentPath.length > 0 && currentPath[0] === menuItem.url) }]}>{menuItem.name}</a></li>
+          <li class="fv"><a href={"/" + menuItem.url} class:list={[{active_link: (currentPath.length === 0 && menuItem.url === '') || (currentPath.length > 0 && currentPath[0] === menuItem.url) }]}>{menuItem.name}</a></li>
         );
       })
     }

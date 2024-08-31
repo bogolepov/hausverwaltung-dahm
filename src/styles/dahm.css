@@ -30,7 +30,7 @@ html {
 	--color-marker: var(--color-dahm-bordo);
 
 	--font-size: 1rem;
-	--font-size: clamp(0.85rem, 1.8vw, 1.05rem);
+	--font-size: clamp(0.92rem, 1.8vw, 1.05rem);
 
 	--header-height: calc(var(--font-size) * 3);
 }

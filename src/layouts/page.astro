@@ -4,7 +4,7 @@
 import "@styles/dahm.css"
 
 import Header from "@components/header.astro";
-// import Footer from "@components/footer.astro";
+import Footer from "@components/footer.astro";
 import Head from "@components/head.astro";
 
 import DahmBulding from "@assets/building_dahm2.jpg"
@@ -19,7 +19,8 @@ import { Picture } from 'astro:assets'
 		margin: 0;
 	} */
 	body {
-		--color-dahm-background: #cecabf;
+		--color-dahm-background: #d8d5cd;
+		/* --color-dahm-background: #ded7cd; */
 		/* background-color: #dbd6d0; */
 		background-color: var(--color-dahm-background);
 	}
@@ -33,6 +34,16 @@ import { Picture } from 'astro:assets'
 		max-width: 1100px;
 		padding: 2.5em;
 		padding: clamp(1.3em, 5vw, 2.5em);
+	}
+	body {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+	}
+	main {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
 	}
 
 </style>
@@ -68,9 +79,8 @@ import { Picture } from 'astro:assets'
 					<slot/>
 				</div>
 			</div>
-			
 		</main>
-		<!-- <Footer/> -->
+		<Footer/>
 
 		<!-- <input type="checkbox" id="theme-switcher" tabindex="-1" aria-label='Themaänderung: dunkel oder hell' checked/> -->
 	</body>

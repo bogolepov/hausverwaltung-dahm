@@ -4,13 +4,14 @@ import MichaelDahm from "@assets/MichaelDahm.jpg"
 import Dahm from "@data/dahm.json"
 
 import { Picture } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
 
 const pictureTextInhaber: string = 'Michael DAHM, Inhaber';
 
 ---
 <style>
   p.description {
-    font-size: 1.2em;
+    font-size: 1.12em;
     font-weight: 300;
   }
   p.info {
@@ -42,6 +43,98 @@ const pictureTextInhaber: string = 'Michael DAHM, Inhaber';
   hr {
     border-color: var(--color-dahm-grey);
   }
+  .mt1 {
+    margin-top: 0.5em;
+  }
+  .team-list {
+    margin-top: 2em;
+  }
+  .grid-person {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .grid-info {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+  .team-item {
+    margin-bottom: 0.8em;
+  }
+  .team-item:not(:has(.objects)) {
+    margin-bottom: 1.2em;
+  }
+  .mb015 {
+    margin-bottom: 0.15em;
+  }
+  .mb02 {
+    margin-bottom: 0.2em;
+  }
+  .person-name {
+    font-size: 1.3em;
+    font-weight: 650;
+    color: var(--color-dahm-bordo);
+  }
+  .position {
+    font-weight: 540;
+  }
+  .cgap05 {
+    column-gap: 0.5em;
+  }
+  .cgap1 {
+    column-gap: 1em;
+  }
+  .cgap2 {
+    column-gap: 1.5em;
+  }
+  .flex-item-contact {
+    width: 100%;
+    max-width: 15em;
+  }
+  .flex-item-info {
+    flex-grow: 1;
+  }
+  .info-item-left{
+    margin-bottom: 0.15em;
+  }
+  .info-item-right {
+    margin-bottom: 0.2em;
+  }
+  .info-address {
+    font-weight: 540;
+    margin-bottom: 0.25em;
+  }
+
+  @media screen and (max-width: 650px) {
+    .grid-person {
+      grid-template-columns: 1fr;
+    }
+    .grid-info {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+    }
+    .team-item:not(:has(.objects)) {
+      margin-bottom: 1.05em;
+    }
+  }
+  @media screen and (max-width: 390px) {
+    .grid-info {
+      grid-template-columns: 1fr;
+    }
+    .info-item-right {
+      padding-left: 1.5em;
+      padding-bottom: 0.5em;
+    }
+    .info-item-left {
+      margin-bottom: 0;
+    }
+    .team-item:not(:has(.objects)) {
+      margin-bottom: 0.8em;
+    }
+    .objects {
+      margin-top: 0.1em;
+    }
+  }
+
 </style>
 
 <section class="service">
@@ -65,11 +158,52 @@ const pictureTextInhaber: string = 'Michael DAHM, Inhaber';
   <h3>Unsere Ansprechpartner</h3>
   <p class="description">Um Ihnen die Suche nach dem richtigen Ansprechpartner etwas zu erleichtern, haben wir für Sie hier unsere Aufgabenbereiche zusammengefasst.</p>
   <p class="info">Sie erreichen uns unter der Telefonnummer : <a href={"tel: " + Dahm.telephone}>{Dahm.telephone}</a></p>
-  <ul>
+  <ul class="team-list">
     {
       Dahm.personal.map(person => {
+        const objects = Dahm.objekte.filter(object => object.person && object.person.includes(person.sid));
+        objects.sort((obj1, obj2) => (obj1.address.str+obj1.address.number).toLowerCase().localeCompare((obj2.address.str+obj2.address.number).toLowerCase(), 'de'));
+        const hasObjects = objects.length > 0;
         return (
-          <li>{person.vorname} {person.nachname}</li>
+          <li class="team-item">
+            <div class="person-name">{person.vorname} {person.nachname}</div>
+            {
+              person.stelle &&
+              <div class="position">{person.stelle}</div>
+            }
+            <div class="grid-person cgap2">
+              <div class="flex-item-contact">
+                <a class="flex-row-center cgap05 mt1 mb02" href={"mailto: " + person.email}>
+                  <Icon name="email" /><span>{person.email}</span>
+                </a>        
+                <a class="flex-row-center cgap05 mb02" href={"tel: " + Dahm.telephone}>
+                  <Icon name="phone" /><span>{person.telephone}</span>
+                </a>
+              </div>
+              <div class="flex-item-info grid-info cgap1 mt1">
+                {
+                  person.burozeit &&
+                  <div class="info-item-left">Bürozeit:</div>
+                  <div class="info-item-right">{person.burozeit}</div>
+                }
+                {
+                  hasObjects &&
+                  <div class="info-item-left">Zuständigkeit:</div>
+                  <ul class="info-item-right objects">
+                    {
+                      objects.map(object => {
+                        const address = object.address;
+                        const isNotHagen = address.city.toLocaleLowerCase('de') !== 'Hagen'.toLocaleLowerCase('de');
+                        return(
+                          <li class="info-address">{address.str} {address.number}{isNotHagen && ', '+address.city}</li>
+                        );
+                      })
+                    }
+                  </ul>
+                }
+              </div>
+            </div>
+          </li>
         );
       })
     }

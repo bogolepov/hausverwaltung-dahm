@@ -204,17 +204,30 @@ use {
 .image-wrapper-landscape {
 	display: block;
 	border-radius: 4px;
-	min-width: 450px;
 	max-width: 100%;
 	height: auto;
 	object-fit: contain;
-	left: min(calc(50% - 225px), 0px);
 	position: relative;
+}
+.cover-image {
+	left: min(calc(50% - 225px), 0px);
+	min-width: 450px;
 }
 
 .flex-center {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+}
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+.flex-row-center {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
 	align-items: center;
 }
 

@@ -1,13 +1,16 @@
 {
+	"company_name": "Hausverwaltung Dahm",
 	"telephone": "+49 2331 924936",
 	"email": "info@hv-dahm.de",
+	"website": "https://www.hausverwaltung-dahm.de",
 	"personal": [
 		{
 			"sid": "mid",
 			"vorname": "Michael",
 			"nachname": "Dahm",
 			"email": "dahm@hv-dahm.de",
-			"burozeit": "Täglich von 9 Uhr - 13 Uhr",
+			"telephone": "+49 2331 924936",
+			"burozeit": "Mo-Fr, 09.00 - 13.00 Uhr",
 			"stelle": "Inhaber"
 		},
 		{
@@ -15,28 +18,32 @@
 			"vorname": "Karin",
 			"nachname": "Hoffmann",
 			"email": "hoffmann@hv-dahm.de ",
-			"burozeit": "Täglich, 9 Uhr - 13 Uhr"
+			"telephone": "+49 2331 924936",
+			"burozeit": "Mo-Fr, 09.00 - 13.00 Uhr"
 		},
 		{
 			"sid": "sib",
 			"vorname": "Silke",
 			"nachname": "Band",
 			"email": "band@hv-dahm.de",
-			"burozeit": "Täglich, 9 Uhr - 13 Uhr"
+			"telephone": "+49 2331 924936",
+			"burozeit": "Mo-Fr, 09.00 - 13.00 Uhr"
 		},
 		{
 			"sid": "sas",
 			"vorname": "Sandra",
 			"nachname": "Saes",
 			"email": "saes@hv-dahm.de",
-			"burozeit": "Montags bis Mittwochs, 9 Uhr - 12 Uhr"
+			"telephone": "+49 2331 924936",
+			"burozeit": "Mo-Mi, 09.00 - 12.00 Uhr"
 		},
 		{
 			"sid": "sis",
 			"vorname": "Silvia",
 			"nachname": "Sommer",
 			"email": "sommer@hv-dahm.de ",
-			"burozeit": "Mittwochs bis Freitags, 9 Uhr - 12 Uhr"
+			"telephone": "+49 2331 924936",
+			"burozeit": "Mi-Fr, 09.00 - 12.00 Uhr"
 		}
 	],
 	"objekte": [
@@ -73,7 +80,7 @@
 		},
 		{
 			"address": { "str": "Sedanstr.", "number": "41", "plz": "58089", "city": "Hagen", "distr": "Altenhagen" },
-			"person": ["sib, sis"],
+			"person": ["sib", "sis"],
 			"photo": ["Sedanstr.jpg"]
 		},
 		{ "address": { "str": "Overbeckstr.", "number": "1", "plz": "44141", "city": "Dortmund", "distr": "Innenstadt" }, "person": ["sib"] },

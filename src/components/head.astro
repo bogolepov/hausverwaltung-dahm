@@ -3,10 +3,12 @@ const { title, description, robots } = Astro.props;
 
 import OpenGraph from "@components/head_og.astro";
 
+import Dahm from "@data/dahm.json"
+
 const now = new Date();
 
-let ogTitle = 'Hausverwaltung DAHM';
-let pageTitle = 'Hausverwaltung DAHM';
+let ogTitle = Dahm.company_name;
+let pageTitle = Dahm.company_name;
 if (title && title.length > 0) {
 	pageTitle = title +  ' — ' + pageTitle;
   ogTitle = title;
@@ -29,9 +31,6 @@ let pageDescription = description;
   <meta name="HandheldFriendly" content="true" />
   <meta name="MobileOptimized" content="width" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <link rel="icon" href="/favicon32.ico" sizes="32x32" />
-  <link rel="icon" href="/favicon.ico" sizes="48x48" />
-  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="/favicon.png" sizes="48x48" />
   <link rel="icon" type="image/png" href="/favicon96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
